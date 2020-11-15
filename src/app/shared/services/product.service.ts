@@ -23,29 +23,29 @@ export class ProductService {
   }
   getProductById(id: number): Observable<any>
   {
-    return this.http.get<Product>('https://localhost:44314/api/' + 'product/' + 'get/' + id);
+    return this.http.get<Product>('https://localhost:44333/api/' + 'product/' + 'get/' + id);
   }
   getProducts(): Observable<Product[]>
   {
-    return this.http.get<Product[]>('https://localhost:44314/api/' + 'product');
+    return this.http.get<Product[]>('https://localhost:44333/api/' + 'product');
   }
   addProduct(product: Product): Observable<Product>
   {
-    return this.http.post<Product>('https://localhost:44314/api/' + 'product/', product);
+    return this.http.post<Product>('https://localhost:44333/api/' + 'product/', product);
   }
   updateProduct(product: Product): Observable<Product>
   {
-    return this.http.put<Product>('https://localhost:44314/api/' + 'product/' + product.id, product);
+    return this.http.put<Product>('https://localhost:44333/api/' + 'product/' + product.id, product);
   }
   deleteProduct(id: number): Observable<any>
   {
-    return this.http.delete('https://localhost:44314/api/' + 'product/' + id);
+    return this.http.delete('https://localhost:44333/api/' + 'product/' + id);
   }
 
   getItems(): Observable<Product[]> {
     httpOptions.headers =
       httpOptions.headers.set('Authorization', 'Bearer ' + this.authenticationService.getToken());
-    return this.http.get<Product[]>('https://localhost:44314/api/' + 'product', httpOptions);
+    return this.http.get<Product[]>('https://localhost:44333/api/' + 'product', httpOptions);
 
   }
 
