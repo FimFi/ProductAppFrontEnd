@@ -20,7 +20,7 @@ export class ProductAddComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  // tslint:disable-next-line:typedef
+
   save() {
     const product = this.productForm.value;
     this.productService.addProduct(product)

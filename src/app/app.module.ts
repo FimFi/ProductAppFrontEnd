@@ -2,8 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { ProductsListComponent } from './products/products-list/products-list.component';
-import { NavbarComponent } from './shared/navbar/navbar.component';
+import { ProductListComponent } from './products/product-list/product-list.component';
+
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ProductDetailsComponent } from './products/product-details/product-details.component';
@@ -14,11 +14,12 @@ import {HttpClientModule} from '@angular/common/http';
 import {AuthenticationService} from './shared/services/authentication.service';
 import { LoginComponent } from './login/login.component';
 import {AuthGuard} from './guards/auth.guard';
+import {NavbarComponent} from './shared/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductsListComponent,
+    ProductListComponent,
     NavbarComponent,
     WelcomeComponent,
     ProductDetailsComponent,
