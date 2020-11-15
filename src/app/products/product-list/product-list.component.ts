@@ -5,12 +5,12 @@ import {AuthGuard} from '../../guards/auth.guard';
 
 @Component({
   selector: 'app-products-list',
-  templateUrl: './products-list.component.html',
-  styleUrls: ['./products-list.component.css']
+  templateUrl: './product-list.component.html',
+  styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
 
-  products: Product[] = [];
+  products: Product[];
   constructor(private productService: ProductService, private authGuard: AuthGuard) {
   }
 
